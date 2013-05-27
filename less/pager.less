@@ -1,54 +1,57 @@
-//
-// Pager pagination
-// --------------------------------------------------
+///
+/// Pager pagination
+/// -------------------------------------------------
+/// <reference path="variables.less" />
+/// <reference path="mixins.less" />
 
 
 .pager {
-  margin: @line-height-computed 0;
-  list-style: none;
-  text-align: center;
-  .clearfix();
-  li {
-    display: inline;
-    > a,
-    > span {
-      display: inline-block;
-      padding: 5px 14px;
-      background-color: @pagination-bg;
-      border: 1px solid @pagination-border;
-      border-radius: 15px;
+    margin: @line-height-computed 0;
+    list-style: none;
+    text-align: center;
+    .clearfix();
+
+    li {
+        display: inline;
+
+        > a,
+        > span {
+            display: inline-block;
+            padding: 5px 14px;
+            background-color: @pagination-bg;
+            border: 1px solid @pagination-border;
+            border-radius: 15px;
+        }
+
+            > a:hover,
+            > a:focus {
+                text-decoration: none;
+                background-color: @pagination-active-bg;
+            }
     }
 
-    > a:hover,
-    > a:focus {
-      text-decoration: none;
-      background-color: @pagination-active-bg;
+    .next {
+        > a,
+        > span {
+            float: right;
+        }
     }
-  }
 
-  .next {
-    > a,
-    > span {
-      float: right;
+    .previous {
+        > a,
+        > span {
+            float: left;
+        }
     }
-  }
 
-  .previous {
-    > a,
-    > span {
-      float: left;
+    .disabled {
+        > a,
+        > a:hover,
+        > a:focus,
+        > span {
+            color: @gray-light;
+            background-color: @pagination-bg;
+            cursor: default;
+        }
     }
-  }
-
-  .disabled {
-    > a,
-    > a:hover,
-    > a:focus,
-    > span {
-      color: @gray-light;
-      background-color: @pagination-bg;
-      cursor: default;
-    }
-  }
-
 }

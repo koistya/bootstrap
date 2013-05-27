@@ -1,13 +1,15 @@
-//
-// Scaffolding
-// --------------------------------------------------
+///
+/// Scaffolding
+/// -------------------------------------------------
+/// <reference path="variables.less" />
+/// <reference path="mixins.less" />
 
 
 // Reset the box-sizing
 // -------------------------
 
 * {
-  .box-sizing(border-box);
+    .box-sizing(border-box);
 }
 
 
@@ -15,18 +17,18 @@
 // -------------------------
 
 html {
-  font-size: 62.5%;
-  // Touch the Mobile Magic™
-  -webkit-overflow-scrolling: touch;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 62.5%;
+    // Touch the Mobile Magic™
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
-  font-family: @font-family-base;
-  font-size: @font-size-base;
-  line-height: @line-height-base;
-  color: @text-color;
-  background-color: @body-bg;
+    font-family: @font-family-base;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    color: @text-color;
+    background-color: @body-bg;
 }
 
 // Reset fonts for revelant elements
@@ -34,9 +36,9 @@ input,
 button,
 select,
 textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 
@@ -44,34 +46,35 @@ textarea {
 // -------------------------
 
 a {
-  color: @link-color;
-  text-decoration: none;
+    color: @link-color;
+    text-decoration: none;
 }
-a:hover,
-a:focus {
-  color: @link-hover-color;
-  text-decoration: underline;
-}
-a:focus {
-  .tab-focus();
-}
+
+    a:hover,
+    a:focus {
+        color: @link-hover-color;
+        text-decoration: underline;
+    }
+
+    a:focus {
+        .tab-focus();
+    }
 
 
 // Images
 // -------------------------
 
 img {
-  // Responsive images (ensure images don't scale beyond their parents)
-  max-width: 100%; // Part 1: Set a maxium relative to the parent
-  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
-
-  // Match vertical alignment with other comment elements
-  vertical-align: middle;
+    // Responsive images (ensure images don't scale beyond their parents)
+    max-width: 100%; // Part 1: Set a maxium relative to the parent
+    height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+    // Match vertical alignment with other comment elements
+    vertical-align: middle;
 }
 
 // Rounded corners
 .img-rounded {
-  border-radius: 6px;
+    border-radius: 6px;
 }
 
 // Image thumbnails
@@ -79,5 +82,5 @@ img {
 
 // Perfect circle
 .img-circle {
-  border-radius: 500px; // crank the border-radius so it works with most reasonably sized images
+    border-radius: 500px; // crank the border-radius so it works with most reasonably sized images
 }
